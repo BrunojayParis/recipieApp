@@ -5,7 +5,7 @@ import "../styles/globals.css";
 function MyApp({ Component, pageProps }) {
   return (
     <>
-    <nav>
+    <nav className="header">
       <div>
         <Link href="/">
           <a>Paris Bar</a>

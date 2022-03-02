@@ -3,7 +3,6 @@ import Link from "next/link";
 import { sanityClient, urlFor } from "../lib/sanity";
 import { groq } from "next-sanity";
 
-
 const recipesQuery = groq`*[_type == "recipe"]{
   _id,
   name,
@@ -12,7 +11,7 @@ const recipesQuery = groq`*[_type == "recipe"]{
 }`;
 
 export default function Home({ recipes }) {
-  console.log(recipes)
+  console.log(recipes);
   return (
     <div>
       <Head>
@@ -25,9 +24,9 @@ export default function Home({ recipes }) {
       <ul className="recipes-list">
         {recipes.map((recipe) => (
           <li key={recipe._id} className="recipe-card">
-            <Link href="">
+            <Link href={`/recipes/${recipe.slug.current}`}>
               <a>
-              <img src={urlFor(recipe.mainImage).url()} alt={recipe.name} />
+                <img src={urlFor(recipe.mainImage).url()} alt={recipe.name} />
                 <span>{recipe.name}</span>
               </a>
             </Link>

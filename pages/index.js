@@ -1,9 +1,9 @@
 import Head from "next/head";
 import Link from "next/link";
 import { sanityClient, urlFor } from "../lib/sanity";
-import { groq } from "next-sanity";
 
-const recipesQuery = groq`*[_type == "recipe"]{
+
+const recipesQuery = `*[_type == "recipe"]{
   _id,
   name,
   slug,
@@ -11,8 +11,7 @@ const recipesQuery = groq`*[_type == "recipe"]{
 }`;
 
 export default function Home({ recipes }) {
-  console.log(recipes);
-  return (
+    return (
     <div>
       <Head>
         <title>Paris Bar</title>

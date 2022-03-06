@@ -95,6 +95,7 @@ main {
 
 .instructions {
   padding: 15px;
+  padding-bottom: 5px;
   display: flex;
   flex-direction: column;
 }

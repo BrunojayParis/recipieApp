@@ -55,7 +55,7 @@ export default {
                 title: "Fraction",
                 type: "string",
                 options: {
-                  list: ["1/2", "1/3", "1/4", "3/4", "2/3"],
+                  list: ["1/2", "1/3", "1/4", "3/4", "2/3", "Few"],
                 },
               },
               {
@@ -63,7 +63,7 @@ export default {
                 title: "Unit",
                 type: "string",
                 options: {
-                  list: ["grams", "cup", "Tbsp.", "tsp."],
+                  list: ["grams", "cup", "Tbsp.", "tsp.", "Shot", "Slice"],
                 },
               },
             ],

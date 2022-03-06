@@ -1,7 +1,8 @@
 import { sanityClient, urlFor} from "../../lib/sanity";
-import {PortableText} from '@portabletext/react'
-import { useState } from "react";
+import {PortableText} from '@portabletext/react';
 import { useRouter } from "next/router";
+import { useState } from "react";
+
 
 
 const recipeQuery = `*[_type == "recipe" && slug.current == $slug][0]{

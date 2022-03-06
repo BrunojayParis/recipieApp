@@ -1,4 +1,3 @@
-import { Main } from "next/document";
 import Link from "next/link"
 import "../styles/globals.css";
 

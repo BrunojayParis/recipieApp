@@ -1,6 +1,7 @@
-import { sanityClient, urlFor, usePreviewSubscription } from "../../lib/sanity";
+import { sanityClient, urlFor} from "../../lib/sanity";
 import {PortableText} from '@portabletext/react'
 import { useState } from "react";
+import { useRouter } from "next/router";
 
 
 const recipeQuery = `*[_type == "recipe" && slug.current == $slug][0]{
@@ -21,6 +22,11 @@ const recipeQuery = `*[_type == "recipe" && slug.current == $slug][0]{
 }`;
 
 export default function OneRecipe({ data }) {
+  const router = useRouter();
+  if (router.fallback){
+    return <div>Loading...</div>
+  }
+
   const [likes, setLikes] = useState(data.recipe.likes)
 
   const addLike = async ()=>{
